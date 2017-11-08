@@ -1,0 +1,59 @@
+body{
+    background-color: rgb(55, 133, 175);
+    margin: 0;
+    padding:0;
+}
+header{
+    background-color: #fff;
+    margin-bottom: 3em;
+}
+nav ul{
+    display: inline-block;
+    padding: 0;
+    margin-left: 1em;
+}
+nav li{
+    float: left;
+    list-style: none;
+    margin-right: 2em;
+}
+
+button{
+    border: 1px solid rgb(55, 133, 175);
+    border-radius: 8%;
+    color:rgb(55, 133, 175);
+    font-weight: bold;
+    background-color: #fff;
+    margin-top: 1em;
+}
+img{
+    padding-left: 22%;
+    padding-top: 0.5em;
+    width: 10%;
+}
+.conteiner{
+    display: inline-block;
+}
+.form{
+    margin-right: 1em;
+
+}
+.block{
+    display: block;
+}
+.inlineFlex{
+    display: inline-flex;
+}
+.navLeft{
+    float: left;
+}
+.navLeft a{
+    text-decoration: none;
+}
+.navRight{
+    float: right;
+}
+#input{
+    display: block;
+}
+
