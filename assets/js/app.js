@@ -76,7 +76,9 @@ window.onload=function(){
                 addButton.appendChild(txtAddButton);
                 newDiv.appendChild(addButton);
                 desabled(addButton);
-                newDiv.appendChild(deleteButton);
+                var deleteButton2=document.createElement('i');
+                deleteButton2.classList.add('fa','fa-times','cancela');
+                newDiv.appendChild(deleteButton2);
                 
                 textareaList.addEventListener("keyup",function(){
                     if(this.value==""){
