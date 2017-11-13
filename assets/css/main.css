@@ -2,47 +2,114 @@ body{
     background-color: rgb(55, 133, 175);
     margin: 0;
     padding:0;
+    font-family: 'Kanit', sans-serif;
+}
+button{
+    width: 7em;
+    height: 2.5em;
+    margin-top:.5em;
+    border: 1px solid rgb(122, 214, 122);
+    border-radius: 8%;
+    color:#fff;
+    font-weight: bold;
+    background-color: rgb(122, 214, 122);
+    
+}
+button:hover{
+    background-color: rgb(126, 223, 126);
+    cursor: pointer;
+}
+button:focus{
+    outline: none;
 }
 header{
     background-color: #fff;
-    margin-bottom: 3em;
+    height: 5em;
 }
-nav ul{
+img{
+    padding-left: 20%;
+    padding-top: 1.2em;
+    width: 10%;
+}
+label{
+    color: black;
+    width: 15em;
+}
+p{
+    font-size: 1.5em;
+    padding-left: 1em;
+    font-weight: 600;
+    margin: 0;
+}
+
+ul{
     display: inline-block;
     padding: 0;
     margin-left: 1em;
 }
-nav li{
+.task li .fa{
+    padding:.6em;
+}
+li{
     float: left;
     list-style: none;
-    margin-right: 2em;
+    margin-right: 1em;
 }
-
-button{
-    border: 1px solid rgb(55, 133, 175);
-    border-radius: 8%;
-    color:rgb(55, 133, 175);
-    font-weight: bold;
-    background-color: #fff;
-    margin-top: 1em;
+.navLeft input{
+    border: none;
+    text-indent: .5em;
 }
-img{
-    padding-left: 22%;
-    padding-top: 0.5em;
-    width: 10%;
+.navLeft li:first-child{
+    padding: .7em;
 }
-.conteiner{
-    display: inline-block;
+.navLeft a{
+    color: rgb(55, 133, 175);
+}
+.navLeft li:nth-child(2){
+    margin-top: .7em;
+    padding-right: .3em;
+    border:2px solid rgb(55, 133, 175);
+    border-radius: .2em;
+    color: rgb(55, 133, 175);
+}
+.navLeft input:focus{
+    outline: none;
+    color: rgb(55, 133, 175);
+}
+.navRight li a{
+    margin-top: .2em;
+    font-size: 20px;
+    line-height: 31px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    color: rgb(55, 133, 175);
+    display: inline-block;    
+    border:2px solid rgb(55, 133, 175);
+    border-radius: 100%;
+}
+.edit{
+    padding: .2em;
+    position: absolute;
+    top:.2em;
+    right: .2em;
+}
+.edit:hover{
+    background-color: rgb(177, 179, 179);
+    border-radius: 4px;
+    text-align: center;
+    padding: .4em;
+    cursor: pointer;
 }
 .form{
     margin-right: 1em;
-
 }
 .block{
     display: block;
 }
-.inlineFlex{
-    display: inline-flex;
+
+.inlineBlock{
+    float: left;
 }
 .navLeft{
     float: left;
@@ -53,7 +120,104 @@ img{
 .navRight{
     float: right;
 }
-#input{
-    display: block;
+.newForm{    
+    background-color: rgb(229, 232, 232);
+    padding: .7em;
+    margin-left: 2em;
+    margin-top: 2em;
+    color: #fff;
+    font-weight: 500;
+    border-radius: .2em;
+    float: left;
+}
+.newForm a{
+    color: black;
+    font-weight: 300;
+}
+.task{
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    
+}
+.task i{
+    padding-left: 1em;
+    color: #fff;
 }
 
+.task .cancela{
+    color: gray;
+}
+.task .menu{
+    margin-right: 1em;
+    float: right;
+    color: #fff;
+    line-height: 3em;
+}
+.task a>i{
+    margin-right: .5em;
+}
+
+textarea{
+    width: 18em;
+    border: 1px solid rgb(177, 179, 179);
+    border-radius: 4px;
+    height: 2.5em;
+    background-color: #fff;
+    font-weight: 400;   
+}
+#divTextarea{
+    background-color:#fff;
+    padding: 0;
+    margin: 0;
+    width: 15em;
+    font-size: 1em;
+    font-weight: 200;
+    color: black;
+    padding: .2em;
+    margin-bottom: .2em;
+    overflow: hidden;
+    border-radius: 4px;
+    position: relative;
+}
+#divTextarea:hover{
+    background-color:rgba(177, 179, 179, 0.37)
+}
+#input{
+    display: block;
+    width: 18em;
+    border: 1px solid rgb(177, 179, 179);
+    border-radius: 4px;
+    height: 2.5em;
+    background-color: rgb(202, 204, 204);
+    text-indent: 1em;
+    font-weight: 400;
+}
+#pTextarea{
+    width: 100%;
+    overflow-wrap: break-word;
+    padding: 0;
+    margin: 0;
+    font-size: 1em;
+    font-weight: 200;
+}
+#rootForm{
+    width: 15em;
+    background-color: rgb(49, 123, 160);
+    padding: .7em;
+    margin-left: 2em;
+    margin-top: 2em;
+    color: #fff;
+    font-weight: 500;
+    border-radius: .2em;
+}
+#rootForm span{
+    display: block;
+}
+#rootForm:hover{
+    background-color: rgb(43, 107, 139);
+    cursor: pointer;
+}
+#task{
+    overflow: hidden;
+}

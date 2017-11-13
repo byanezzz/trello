@@ -3,6 +3,7 @@ window.onload=function(){
     var form=document.getElementById('rootForm');
     spanList.onclick=function(){
         this.style.display="none";
+        form.style.backgroundColor="rgb(229, 232, 232)";
         createInputLista(form);
     }
     
@@ -24,7 +25,7 @@ window.onload=function(){
         desabled(saveButton);
        
         var deleteButton=document.createElement('i');
-        deleteButton.classList.add('fa','fa-times');
+        deleteButton.classList.add('fa','fa-times','cancela');
         conteinerList.appendChild(deleteButton);
         
         inputList.addEventListener("keyup",function(){
@@ -33,12 +34,13 @@ window.onload=function(){
             }else{
                 enabled(saveButton);
             }
+            
         })
         
         saveButton.addEventListener("click",function(){
             var newForm=document.createElement('div');
-            newForm.setAttribute("class","inlineFlex");
-            
+            newForm.setAttribute("class","inlineBlock");
+            newForm.setAttribute("class","newForm")
             var task= document.getElementById('task');
             task.appendChild(newForm);
             
@@ -48,7 +50,6 @@ window.onload=function(){
             task.insertBefore(newForm,form);
             
             var tittleList=document.createElement("label");
-            tittleList.setAttribute("type","text");
             tittleList.setAttribute("class","block");
             newDiv.appendChild(tittleList);
             
@@ -60,25 +61,50 @@ window.onload=function(){
             txtAddList=document.createTextNode('Agregar Lista..');
             addList.setAttribute("href","#");
             addList.appendChild(txtAddList);
-            newDiv.appendChild(addList);
+            newForm.appendChild(addList);
+            inputList.value="";
+            desabled(this);
 
             addList.addEventListener("click",function(){
                 this.style.display="none";
                 var textareaList=document.createElement('textarea');
-                textareaList.setAttribute("class","textarea");
                 textareaList.setAttribute("class","block");
                 newDiv.appendChild(textareaList);
         
                 var addButton=document.createElement('button');
-                txtAddButton=document.createTextNode('Añadir');
+                var txtAddButton=document.createTextNode('Añadir');
                 addButton.appendChild(txtAddButton);
                 newDiv.appendChild(addButton);
-
+                desabled(addButton);
+                newDiv.appendChild(deleteButton);
+                
+                textareaList.addEventListener("keyup",function(){
+                    if(this.value==""){
+                        desabled(addButton);        
+                    }else{
+                        enabled(addButton);
+                        autosize(textareaList);
+                        
+                    }
+                });
                 addButton.addEventListener("click",function(){
-                    var newTextareaList=document.createElement('textarea');
-                    newTextareaList.setAttribute("class","textarea");
-                    newTextareaList.setAttribute("class","block");
-                    newDiv.insertBefore(newTextareaList,addButton);
+                    var divTextarea=document.createElement("div");
+                    divTextarea.setAttribute("id","divTextarea")
+                    newDiv.insertBefore(divTextarea,textareaList);
+                    
+                    var pTextarea=document.createElement("p");
+                    pTextarea.setAttribute("id","pTextarea");
+                    divTextarea.appendChild(pTextarea);
+
+                    var txtPtextarea=document.createTextNode(textareaList.value)
+                    pTextarea.appendChild(txtPtextarea);
+
+                    var iTextarea=document.createElement("i");
+                    iTextarea.classList.add("fa","fa-pencil","edit")
+                    divTextarea.appendChild(iTextarea);
+                    textareaList.value="";
+                    autosize(textareaList);
+                    desabled(addButton);
                 });
             });
 
@@ -91,6 +117,12 @@ window.onload=function(){
     }
     function enabled(button){
         button.disabled=false;
+    }
+    function autosize(el){
+        setTimeout(function(){
+            el.style.cssText = 'height:auto; padding:0';
+            el.style.cssText = 'height:' + el.scrollHeight + 'px';
+        },0);
     }
     
 }

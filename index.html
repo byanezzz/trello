@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Trello</title>
+    <link href="https://fonts.googleapis.com/css?family=Kanit:200,400" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
 <body>
@@ -12,28 +13,34 @@
         <nav>           
             <div class="navigation">
                 <ul class="navLeft">
-                    <li><a href="#">Trello</a></li>
-                    <li><input type="search" name="" value=""><i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-trello" aria-hidden="true"></i> Tableros</a></li>
+                    <li><input type="text" name="" value=""><i class="fa fa-search" aria-hidden="true"></i></li>
                 </ul>
                 <img src="assets/img/trello-logo-blue.png" alt="trello" class="logo">            
                 <ul class="navRight">
-                    <li><a><i class="fa fa-plus" aria-hidden="true"></i></a></li>
-                    <li><a><i class="fa fa-info" aria-hidden="true"></i></a></li>
-                    <li><a><i class="fa fa-bell-o" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-info" aria-hidden="true"></i></a></li>
+                    <li><a href="#"><i class="fa fa-bell-o" aria-hidden="true"></i></a></li>
                 </ul>
             </div>
         </nav>
     </header>
-    <section>
+    <section class="task">
+        <ul>
+            <li><p>Tablero - Reto de Código</p></li>
+            <li><i class="fa fa-star-o" aria-hidden="true"></i></li>
+            <li><i class="fa fa-lock" aria-hidden="true"></i> Privado</li>
+        </ul>
+        <a class="menu" href="#"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>Mostrar Menú</a>
+        
         <div id="task">
-            <div id="rootForm" class="inlineFlex">
-                <span>Añadir una lista</span>
+            <div id="rootForm" class="inlineBlock">
+                <span>Añadir una lista...</span>
             </div>
         </div>
     </section>
 
     <script src="https://use.fontawesome.com/7873633050.js"></script>
- <!--<img id="logo" src="assets/img/trello-logo-blue.png" alt="logo">-->
-     <script type="text/javascript" src="assets/js/app.js"></script>
+    <script type="text/javascript" src="assets/js/app.js"></script>
 </body>
 </html>
